@@ -6,15 +6,15 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import androidx.cardview.widget.CardView
 
-class ItemView  : RecyclerView.ViewHolder {  //ViewHolder is a class , item vieholderclass name
+class ItemView  : RecyclerView.ViewHolder {  
 
-   var image : ImageView//object hai Imageview ka
+   var image : ImageView
     lateinit var card : CardView
     var name : TextView
     var title : TextView
 
 
-    constructor(item:View)  :super(item){ //item is a object of View item represents itrm_layout
+    constructor(item:View)  :super(item){ 
          image = item.findViewById(R.id.img)
         name= item.findViewById(R.id.name)
         title= item.findViewById(R.id.title)
