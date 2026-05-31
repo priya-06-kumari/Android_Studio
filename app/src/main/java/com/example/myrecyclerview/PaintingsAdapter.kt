@@ -5,20 +5,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecyclerview.model.Paintings
 
-class PaintingsAdapter( var data: MutableList<Paintings>) : RecyclerView.Adapter<ItemView>() {                          //here wev will pass data to constructor
-    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ItemView {  //returns ItemView
-        var v = LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false) //inflate means  import item_layout
-         return ItemView(v)                                          //v is passed in ItemView Constructor
+class PaintingsAdapter( var data: MutableList<Paintings>) : RecyclerView.Adapter<ItemView>() {                         
+    override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ItemView {  
+        var v = LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false) 
+         return ItemView(v)                                         
     }
 
-    override fun onBindViewHolder(item : ItemView, index : Int) {  //item is an object of ItemView
+    override fun onBindViewHolder(item : ItemView, index : Int) {  
         var Paintings = data.get(index)
         item.image.setImageResource(Paintings.image)
-        item.name.setText(Paintings.name)                              //name bind kra h name se and so on
+        item.name.setText(Paintings.name)                             
         item.title.setText(Paintings.title)
 
     }
-    override fun getItemCount(): Int {                                 // it tells how many views to be created in recycler view
+    override fun getItemCount(): Int {                                 
         return data.size
     }
 }
@@ -27,4 +27,3 @@ class PaintingsAdapter( var data: MutableList<Paintings>) : RecyclerView.Adapter
 
 
 
-//these function are call by AS here , we have only define the functions
